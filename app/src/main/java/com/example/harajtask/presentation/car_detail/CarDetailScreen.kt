@@ -36,7 +36,7 @@ fun CarDetailScreen(
                     Image(
                         painter = rememberImagePainter(car.thumbURL),
                         contentDescription = null,
-                        contentScale = ContentScale.Crop,
+                        contentScale = ContentScale.FillBounds,
                         modifier = Modifier.fillMaxWidth()
                             .size(250.dp, 330.dp)
                     )

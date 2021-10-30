@@ -36,21 +36,28 @@ fun CarListItem(
            .fillMaxWidth()
            .clickable { onItemClick(car) }
            .padding(10.dp),
-       horizontalArrangement = Arrangement.SpaceBetween
+            horizontalArrangement = Arrangement.SpaceBetween
    ){
-       Image(
-           painter = rememberImagePainter(car.thumbURL),
-           contentDescription = null,
-           contentScale = ContentScale.Crop,
+       Column(
            modifier = Modifier
-               .clip(shape = RoundedCornerShape(12.dp))
-               .size(150.dp, 100.dp),
-       )
+//               .fillMaxSize()
+//               .padding(start = 20.dp, end = 0.dp),
+       ) {
+           Image(
+               painter = rememberImagePainter(car.thumbURL),
+               contentDescription = null,
+               contentScale = ContentScale.FillBounds,
+               modifier = Modifier
+                   .clip(shape = RoundedCornerShape(12.dp))
+                   .size(160.dp, 100.dp),
+           )
+       }
+
        Column (
            modifier = Modifier
                .fillMaxSize()
                .padding(start = 20.dp, end = 0.dp),
-//               horizontalAlignment = Alignment.End
+               horizontalAlignment = Alignment.End
        ){
            Text(
                buildAnnotatedString {
@@ -63,7 +70,7 @@ fun CarListItem(
                overflow = TextOverflow.Ellipsis,
                textAlign = TextAlign.Right,
                style = MaterialTheme.typography.body1,
-               modifier = Modifier.padding(top = 10.dp,bottom = 10.dp)
+//               modifier = Modifier.padding(top = 10.dp,bottom = 10.dp)
            )
            Text(
                text = "${car.date}",
@@ -78,27 +85,46 @@ fun CarListItem(
                overflow = TextOverflow.Ellipsis
            )
            Row(
-               verticalAlignment = Alignment.CenterVertically,
-//               horizontalArrangement = Arrangement.End
+               modifier = Modifier
+                   .fillMaxWidth()
+                   .clickable { onItemClick(car) }
+                   .padding(10.dp),
+                   horizontalArrangement = Arrangement.SpaceBetween
            ){
-               Text(
-                   text = "${car.city}",
-                   textAlign = TextAlign.Left,
-                   style = MaterialTheme.typography.body2,
-                   overflow = TextOverflow.Ellipsis
-               )
+//               Column(
+//                   modifier = Modifier
+//
+//                       .padding(start = 20.dp),
+//
+//               ) {
+                   Text(
+                       text = "${car.city}",
+                       textAlign = TextAlign.Start,
+                       style = MaterialTheme.typography.body2,
+                       overflow = TextOverflow.Ellipsis
+                   )
 
-               Text(
-                   text = "${car.username}",
-                   textAlign = TextAlign.Right,
-                   style = MaterialTheme.typography.body2,
-                   overflow = TextOverflow.Ellipsis
-               )
+//               }
+
+//               Column(
+//                   modifier = Modifier
+//
+//                       .padding(start = 20.dp),
+//                        horizontalAlignment = Alignment.End
+//
+//                   ) {
+                   Text(
+                       text = "${car.username}",
+                       textAlign = TextAlign.End,
+                       style = MaterialTheme.typography.body2,
+                       overflow = TextOverflow.Ellipsis,
+
+                   )
+//               }
+
 
            }
 
-
-
-   }
+        }
    }
 }
