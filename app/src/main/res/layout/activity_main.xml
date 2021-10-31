@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".main.MainActivity">
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".presentation.MainActivity">-->
 
-<!--    <ListView-->
-<!--        android:id="@+id/car_list"-->
+<!--&lt;!&ndash;    <ListView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/car_list"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        />&ndash;&gt;-->
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+
+<!--        android:id="@+id/recyclerSpace"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent"-->
-<!--        />-->
-    <androidx.recyclerview.widget.RecyclerView
-
-        android:id="@+id/recyclerSpace"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none">
-    </androidx.recyclerview.widget.RecyclerView>
+<!--        android:scrollbars="none">-->
+<!--    </androidx.recyclerview.widget.RecyclerView>-->
 
 
-</LinearLayout>
+<!--</LinearLayout>-->
